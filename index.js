@@ -90,8 +90,13 @@ async function main() {
             // url: 'http://sebbo.net/'
         });
     }
-
-    serve(); // setup server
+    if (!PORT) {
+        console.log(`Got ${trips.length} trip(s)`);
+        await calendar.save('drops.ics');
+        console.log('Wrote to drops.ics');
+    } else {
+        serve(); // setup server
+    }
 }
 
 main().then(ok => console.dir({ ok }), err => console.error(err));

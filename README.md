@@ -23,9 +23,15 @@ program will list all drops you can 'see' when it runs
 
 `npm i && node index.js`
 
+The calendar is then written to `drops.ics` and the program exits.
+
+### As a server
+
+Set the `PORT` variable to a number such as 3000 and run the process.
+
 The calendar is then presented at <http://127.0.0.1:3000> (or alternate `$PORT`).
 
-Access for example http://127.0.0.1:3000/drops.ics and it will download or subscribe an .ics file with the drop cutoff dates
+Access for example http://127.0.0.1:3000/drops.ics and it will download or subscribe an .ics file with the drop cutoff dates.
 
 ## License
 
